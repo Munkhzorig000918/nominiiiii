@@ -10,8 +10,9 @@ module.exports = {
     extend: {
       colors: {
         "main": {
-          "primary": "2B3674",
+          "primary": "#2B3674",
           "disabled": "#A3AED0",
+          "gray": "#8F9BBA",
           "background": "#F4F7FE",
         },
         "special": {
@@ -21,6 +22,14 @@ module.exports = {
           "btn": "#4318FF",
         },
       },
+      borderRadius: {
+        "5": "5px",
+        "10": "10px",
+        "20": "20px",
+      },
+      fontSize: {
+        "tiny": "13px",
+      }
     },
   },
   plugins: [],
