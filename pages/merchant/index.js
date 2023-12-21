@@ -4,6 +4,10 @@ import List from '../../components/Merchant/List'
 import DepositWithdraw from '../../components/Merchant/DepositWithdraw'
 import Transactions from '../../components/Merchant/Transactions'
 import APIIntegration from '../../components/Merchant/APIIntegration'
+import TokenConfig from '../../components/Merchant/TokenConfig'
+import Loyalty from '../../components/Merchant/Loyalty'
+import UserPermission from '../../components/Merchant/User'
+import Balance from '../../components/Merchant/Balance'
 
 const MerchangePage = () => {
     const router = useRouter()
@@ -17,14 +21,6 @@ const MerchangePage = () => {
         }
     }, [router])
 
-    if (selectedType === 'list') {
-        return <List />
-    } else if (selectedType === 'depo-with') {
-        return <DepositWithdraw />
-    } else if (selectedType === 'transactions') {
-        return <Transactions />
-    }
-
     switch (selectedType) {
         case "list":
             return <List />
@@ -34,6 +30,14 @@ const MerchangePage = () => {
             return <Transactions />
         case "api-integration":
             return <APIIntegration />
+        case "token":
+            return <TokenConfig />
+        case "loyalty":
+            return <Loyalty />
+        case "user-permission":
+            return <UserPermission />
+        case "balance":
+            return <Balance />
         default:
             return <List />
     }

@@ -48,8 +48,8 @@ const Layout = ({ children }) => {
     }, [router])
 
     return (
-        <div className="w-screen min-h-screen h-screen bg-main-background flex items-start">
-            <div className="h-full w-[290px] bg-white">
+        <div className="w-screen min-h-screen bg-main-background flex items-start">
+            <div className="h-full w-[290px] bg-white min-h-screen">
                 <div className="h-[100px] flex items-center justify-center border-b border-main-background">
                     <h3 className="uppercase text-main-primary text-xl font-bold">cystody dashboard</h3>
                 </div>
@@ -112,7 +112,7 @@ const Layout = ({ children }) => {
                         </div>
                     </div>
                 </div>
-                <main className='pt-3'>{children}</main>
+                <main className='pt-3 pb-20'>{children}</main>
             </div>
         </div>
     )
