@@ -42,7 +42,7 @@ const APITable = () => {
                 <tbody>
                     {[1,2,3,4].map((item) => {
                         return (
-                            <tr className='font-medium text-main-primary text-sm'>
+                            <tr key={item} className='font-medium text-main-primary text-sm'>
                                 <td className='pr-2 pl-5 py-4'>
                                     <div className='font-bold'>
                                         05d6618eaf802d746097

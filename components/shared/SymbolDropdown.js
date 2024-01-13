@@ -23,7 +23,7 @@ export const SymbolDropdown = ({ selectedItem, setSelectedItem, list }) => {
                 <div className="z-50 rounded-b-md absolute w-full max-h-[200px] bg-white border top-12 left-0 overflow-y-auto">
                     {list.map((item) => {
                         return (
-                            <div onClick={() => changeItem(item)} className={`${selectedItem === item ? 'bg-gray-100' : ''} p-2 flex items-center space-x-3 hover:bg-gray-100 cursor-pointer`}>
+                            <div key={item.symbol} onClick={() => changeItem(item)} className={`${selectedItem === item ? 'bg-gray-100' : ''} p-2 flex items-center space-x-3 hover:bg-gray-100 cursor-pointer`}>
                                 <Icon icon={item.icon} fontSize={25} className="" />
                                 <p className="text-sm text-main-dark">{item.symbol}</p>
                             </div>

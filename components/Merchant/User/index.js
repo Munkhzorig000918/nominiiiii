@@ -19,7 +19,7 @@ const UserPermission = () => {
                     </div>
                     <div className='flex justify-center items-center space-x-20'>
                         <div className='space-y-2'>
-                            <h4 className='text-xl font-bold text-main-dark'>User's ID</h4>
+                            <h4 className='text-xl font-bold text-main-dark'>User&apos;s ID</h4>
                             <div className='w-[300px] py-2 px-4 border rounded-md'>
                                 32265215
                             </div>

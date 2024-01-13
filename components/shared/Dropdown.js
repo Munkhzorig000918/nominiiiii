@@ -18,7 +18,7 @@ export const Dropdown = ({ selectedItem, setSelectedItem, list, labelName }) => 
                 <div className="z-50 rounded-b-md absolute w-full max-h-[200px] bg-white border top-11 left-0 overflow-y-auto">
                     {list.map((item) => {
                         return (
-                            <div onClick={() => changeItem(item)} className={`${selectedItem === item ? 'bg-gray-100' : ''} p-2 flex items-center space-x-3 hover:bg-gray-100 cursor-pointer`}>
+                            <div key={item} onClick={() => changeItem(item)} className={`${selectedItem === item ? 'bg-gray-100' : ''} p-2 flex items-center space-x-3 hover:bg-gray-100 cursor-pointer`}>
                                 <p className="text-sm text-main-dark">{item.name}</p>
                             </div>
                         )
