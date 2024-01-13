@@ -15,7 +15,9 @@ module.exports = {
           "disabled": "#A3AED0",
           "gray": "#8F9BBA",
           "background": "#F4F7FE",
-          "cloud": "#96A3B0"
+          "cloud": "#96A3B0",
+          "secondary": "#E5E8EB",
+          "terteriary": "#F5F5F5",
         },
         "special": {
           "danger": "#EE5D50",

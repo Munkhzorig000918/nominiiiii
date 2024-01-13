@@ -1,10 +1,26 @@
-import React, { Fragment } from "react"
+import React, { Fragment, useState } from "react"
 import { Dialog, Transition } from "@headlessui/react"
 import { Icon } from "@iconify/react"
 import Image from "next/image"
-import qrImg from '../../../src/assets/images/qr.jpg'
+import qrImg from '../../../../src/assets/images/qr.jpg'
+import { SymbolDropdown } from "../../../shared/SymbolDropdown"
+import { Dropdown } from "../../../shared/Dropdown"
+
+const dummyData = [
+  { id: 1, symbol: "BTC", balance: "0.00000000", icon: "cryptocurrency-color:btc" },
+  { id: 1, symbol: "USDT", balance: "0.10000000", icon: "cryptocurrency-color:usdt" },
+  { id: 1, symbol: "BNB", balance: "0.02000000", icon: "cryptocurrency-color:bnb" },
+]
+
+const dummyData2 = [
+  { id: 1, name: "Bitcoin (NATIVE)" },
+  { id: 2, name: "Tether (NATIVE)" },
+  { id: 3, name: "Binance coin (NATIVE)" },
+]
 
 function DepositModal({ isShowModal, setIsShowModal }) {
+  const [selectedSymbol, setSelectedSymbol] = useState(dummyData[0])
+  const [selectedItem, setSelectedItem] = useState(dummyData2[0])
   
   return (
     <Transition appear show={isShowModal} as={Fragment}>
@@ -42,25 +58,8 @@ function DepositModal({ isShowModal, setIsShowModal }) {
                 </div>
                 <div className="space-y-8">
                     <div className="space-y-4">
-                      <div className="relative flex items-center justify-between border rounded-md py-3 px-3">
-                        <div className="flex items-center space-x-2">
-                            <Icon icon={"cryptocurrency-color:btc"} fontSize={25} className="" />
-                            <p className="text-sm text-main-dark">BTC</p>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                            <p className="text-sm text-main-cloud">Balance 0.00000000</p>
-                            <Icon onClick={null} icon={"ep:arrow-down"} fontSize={20} className="cursor-pointer text-main-dark" />
-                        </div>
-                        {/* <div className="rounded-b-md absolute w-full h-10 bg-red-100 top-12 left-0">
-                        </div> */}
-                      </div>
-                      <div className="relative flex items-center justify-between border rounded-md py-3 px-3">
-                          <p className="text-main-dark text-sm">Bitcoin (NATIVE)</p>
-                          <Icon onClick={null} icon={"ep:arrow-down"} fontSize={20} className="cursor-pointer text-main-dark" />
-                          <div className="text-[10px] text-main-cloud absolute z-10 bg-white -top-[8px] left-2">Select Network</div>
-                          {/* <div className="rounded-b-md absolute w-full h-10 bg-red-100 top-12 left-0">
-                          </div> */}
-                      </div>
+                      <SymbolDropdown selectedItem={selectedSymbol} setSelectedItem={setSelectedSymbol} list={dummyData} />
+                      <Dropdown selectedItem={selectedItem} setSelectedItem={setSelectedItem} list={dummyData2} labelName={"Select Network"} />
                     </div>
                     <div className="flex justify-center">
                         <div className="bg-white rounded-md p-4">

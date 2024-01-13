@@ -15,3 +15,9 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+.half-border-on-top {
+  border-top: 1px solid;
+  border-radius: 100%;
+  border-image: linear-gradient(to top, #000 50%, transparent 50%) 100% 1;
+}

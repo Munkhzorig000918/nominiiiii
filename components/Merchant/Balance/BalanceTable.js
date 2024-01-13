@@ -1,10 +1,9 @@
 import { Icon } from "@iconify/react"
-import DepositModal from "./DepositModal"
+import DepositModal from "./Modal/DepositModal"
 
 export const BalanceTable = () => {
     return (
         <>
-            <DepositModal isShowModal={true} setIsShowModal={null} />
             <div>
                 <table class="w-full table-auto">
                     <thead>
