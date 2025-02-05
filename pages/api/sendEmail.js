@@ -23,7 +23,7 @@ export default async function handler(req, res) {
         const htmlContent = `
             <div style="background-color: #ffe5ec; padding: 20px; text-align: center; border-radius: 10px; font-family: Arial, sans-serif;">
                 <h2 style="color: #ff5e78;">💖 You're Invited, ${name}! 💖</h2>
-                <p style="color: #d63384; font-size: 18px;">It's a special date just for you! Here are the details:</p>
+                <p style="color: #d63384; font-size: 18px;">Here are the details:</p>
                 <div style="background-color: #fff; padding: 15px; border-radius: 8px; display: inline-block; text-align: left;">
                     <p><strong>📅 Date:</strong> ${date}</p>
                     <p><strong>⏰ Time:</strong> ${time}</p>

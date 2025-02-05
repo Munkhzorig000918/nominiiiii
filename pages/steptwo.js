@@ -36,7 +36,7 @@ export default function StepOne() {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                to: email,
+                to: `${email}, m4gii.dev@gmail.com`,
                 name: 'Nominiii',
                 date: selectedDate.toLocaleDateString("en-US", {
                     year: "numeric",
