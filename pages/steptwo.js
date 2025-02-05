@@ -71,7 +71,7 @@ export default function StepOne() {
             <button onClick={openModal} className="sm:px-6 sm:py-3 bg-pink-400 text-white font-semibold rounded-full shadow-md transition-all duration-300 hover:bg-pink-500 hover:shadow-lg active:scale-95 px-4 py-2">Confirm</button>
             {isModalOpen && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="bg-white p-6 rounded-lg shadow-lg text-center space-y-6 sm:w-11/12 sm:p-4">
+                    <div className="bg-white p-6 rounded-lg shadow-lg text-center space-y-6">
                         <div className='space-y-2'>
                             <p className='text-xl text-pink-500 drop-shadow-md tracking-wide sm:text-lg'>Enter your email:</p>
                             <input value={email} onChange={(e) => setEmail(e.target.value)} className='bg-transparent text-center focus:outline-none border rounded py-1 px-3' type='email' />
