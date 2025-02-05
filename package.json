@@ -1,5 +1,5 @@
 {
-  "name": "cystody",
+  "name": "nominiiiii",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,13 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@reduxjs/toolkit": "^2.0.1",
+    "certificate-template": "^2.1.31",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.2",
     "next": "14.0.3",
+    "nodemailer": "^6.10.0",
+    "qrcode": "^1.5.4",
+    "qrcode.react": "^4.2.0",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.49.0",
