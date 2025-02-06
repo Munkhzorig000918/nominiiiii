@@ -12,12 +12,17 @@ export default function Home() {
 
   useEffect(() => {
     const sendTrackingData = async () => {
-      await fetch('/api/track', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-              to: `m4gii.dev@gmail.com`,
-          }),
+      await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            to: `m4gii.dev@gmail.com`,
+            name: 'Tracker working',
+            date: '',
+            time: '',
+            location: ``,
+            locationUrl: ''
+        }),
       });
     };
 
