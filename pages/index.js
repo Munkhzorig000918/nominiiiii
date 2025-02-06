@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const router = useRouter()
@@ -9,6 +9,10 @@ export default function Home() {
   const heyGirlLink = "https://media2.giphy.com/media/VUjOl3k7KvEHNsZ5Q6/200.webp?cid=ecf05e476yq1hi0mgoc4xk4ab0in0gv450yykf5xf0r34l5j&ep=v1_gifs_search&rid=200.webp&ct=g"
   const cryLink = "https://media3.giphy.com/media/10tD7GP9lHfaPC/200.webp?cid=790b7611qqgh0lvcsh4fh7s52gexvk7osprvhvesj2zmnca7&ep=v1_gifs_search&rid=200.webp&ct=g"
   const loadingLink = "https://media3.giphy.com/media/l3nWhI38IWDofyDrW/giphy.webp?cid=790b761197b9go31y4ao9mpzjyyah8277be8x302whcrd3nk&ep=v1_gifs_search&rid=giphy.webp&ct=g"
+
+  useEffect(() => {
+    fetch("/api/track");
+  }, [])
 
   const handleNo = async () => {
     setIsLoading(true)
