@@ -11,18 +11,18 @@ export default function Home() {
   const loadingLink = "https://media3.giphy.com/media/l3nWhI38IWDofyDrW/giphy.webp?cid=790b761197b9go31y4ao9mpzjyyah8277be8x302whcrd3nk&ep=v1_gifs_search&rid=giphy.webp&ct=g"
 
   useEffect(() => {
-    handleTrack()
-  }, [])
+    const sendTrackingData = async () => {
+      await fetch('/api/track', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+              to: `m4gii.dev@gmail.com`,
+          }),
+      });
+    };
 
-  const handleTrack = async () => {
-    await fetch('/api/track', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-          to: `m4gii.dev@gmail.com`,
-      }),
-    });
-  }
+    sendTrackingData();
+  }, [])
 
   const handleNo = async () => {
     setIsLoading(true)
