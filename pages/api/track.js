@@ -1,6 +1,10 @@
 import nodemailer from 'nodemailer';
 
 export async function handler(req, res) {
+    if (req.method !== 'POST') {
+        return res.status(405).json({ message: 'Only POST requests allowed' });
+    }
+    
   const ip = req.headers.get("x-forwarded-for") || req.ip || "unknown";
   const userAgent = req.headers.get("user-agent");
 
